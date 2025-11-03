@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { Conversation } from './components/Conversation';
 import { Controls } from './components/Controls';
+import { ErrorBanner } from './components/ErrorBanner';
 import { geminiService } from './services/geminiService';
 import { Message, Sender, ConnectionState, Correction, AIVoice, PracticeMode } from './types';
 
@@ -11,6 +12,10 @@ const PRACTICE_STARTERS = [
     "How about we try booking a hotel room?",
     "Can we do a mock job interview?",
     "I'd like to practice asking for directions.",
+    "Let's talk about our daily routines.",
+    "Let's discuss plans for a trip.",
+    "How about making a doctor's appointment?",
+    "Can we practice shopping for clothes?",
 ];
 
 
@@ -185,10 +190,11 @@ function App() {
       
       <main className="flex-1 flex flex-col overflow-y-auto">
         {errorInfo && (
-          <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 m-4 shadow-md" role="alert">
-            <p className="font-bold">{errorInfo.title}</p>
-            <p>{errorInfo.message}</p>
-          </div>
+          <ErrorBanner 
+            title={errorInfo.title}
+            message={errorInfo.message}
+            onDismiss={() => setError(null)}
+          />
         )}
 
         {messages.length === 0 && !isSessionActive && practiceMode === PracticeMode.Practice && (
