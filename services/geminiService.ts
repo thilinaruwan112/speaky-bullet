@@ -1,8 +1,11 @@
-import { GoogleGenAI, LiveSession, LiveServerMessage, Modality } from '@google/genai';
+// Fix: 'LiveSession' is not an exported member of '@google/genai'.
+// It has been removed, and 'Blob' has been added for use in the session type definition.
+import { GoogleGenAI, LiveServerMessage, Modality, Blob } from '@google/genai';
 import { createBlob, decode, decodeAudioData } from '../utils/audioUtils';
 import { Correction, CorrectionType, AIVoice } from '../types';
 
-let sessionPromise: Promise<LiveSession> | null = null;
+// Fix: Replaced 'LiveSession' with an inline type describing the session object based on its usage.
+let sessionPromise: Promise<{ sendRealtimeInput(input: { media: Blob }): void; close(): void; }> | null = null;
 
 // Audio context for user input
 let inputAudioContext: AudioContext | null = null;
