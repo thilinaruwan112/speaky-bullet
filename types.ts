@@ -41,4 +41,5 @@ export enum AIVoice {
 export enum PracticeMode {
   FreeTalk = 'Free Talk',
   Practice = 'Practice',
+  PronunciationPractice = 'Pronunciation Practice',
 }

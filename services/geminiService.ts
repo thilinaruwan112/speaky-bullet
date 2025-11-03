@@ -231,4 +231,34 @@ async function getSpeech(text: string, voice: AIVoice): Promise<string | null> {
   }
 }
 
-export const geminiService = { connect, close, getSpeech };
+async function generateOpeningText(scenario: string): Promise<string> {
+    if (!process.env.API_KEY) {
+        throw new Error('An API key is required, but it has not been configured.');
+    }
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
+    let prompt: string;
+    if (scenario === 'pronunciation') {
+        prompt = `You are an English pronunciation coach. Start a practice session. Greet the user and provide the very first short sentence or tongue twister for them to pronounce. Your response must be only the words you would speak. For example: "Hi there! Let's work on your pronunciation. Please say this for me: 'How now, brown cow?'" Be concise and friendly.`;
+    } else {
+        prompt = `You are an English tutor. Start a practice conversation about "${scenario}". Greet the user and ask the first direct question to begin the role-play. Your response must be only the words you would speak. Be concise and friendly.`;
+    }
+
+    try {
+        const response = await ai.models.generateContent({
+            model: 'gemini-2.5-flash',
+            contents: prompt,
+        });
+        return response.text.trim();
+    } catch (error) {
+        console.error('Failed to generate opening text:', error);
+        // Provide a reliable fallback if the API call fails
+        if (scenario === 'pronunciation') {
+             return "Hello! Let's practice your pronunciation. Please say: 'She sells seashells by the seashore.'";
+        }
+        return `Hello! Let's practice "${scenario}". Are you ready to start?`;
+    }
+}
+
+
+export const geminiService = { connect, close, getSpeech, generateOpeningText };

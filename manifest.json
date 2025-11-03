@@ -1,0 +1,16 @@
+{
+  "short_name": "Speak AI",
+  "name": "Spoken English Practice AI",
+  "description": "An interactive web application that helps users practice their spoken English by having real-time conversations with an AI tutor powered by the Gemini API.",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4f46e5",
+  "background_color": "#f9fafb"
+}

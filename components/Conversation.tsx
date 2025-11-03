@@ -11,23 +11,23 @@ interface ConversationProps {
 }
 
 const SpeakerIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
-    <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.66 1.905H6.44l4.5 4.5c.944.945 2.56.276 2.56-1.06V4.06ZM18.584 14.828a1.5 1.5 0 0 0 0-2.12l-1.414-1.414a1.5 1.5 0 1 0-2.121 2.121l1.414 1.414a1.5 1.5 0 0 0 2.121 0Zm-2.12-4.242a1.5 1.5 0 0 0-2.121-2.121L12.929 9.9a1.5 1.5 0 0 0 2.121 2.121l1.414-1.414ZM19.293 18.364a1.5 1.5 0 0 0 0-2.121l-1.414-1.414a1.5 1.5 0 0 0-2.121 2.121l1.414 1.414a1.5 1.5 0 0 0 2.121 0Zm-4.242 0a1.5 1.5 0 0 0 2.121-2.121l-1.414-1.414a1.5 1.5 0 0 0-2.121 2.121l1.414 1.414ZM19.293 5.636a1.5 1.5 0 0 0-2.121 0l-1.414 1.414a1.5 1.5 0 0 0 2.121 2.121l1.414-1.414a1.5 1.5 0 0 0 0-2.121Z" />
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
   </svg>
 );
 
 const GrammarIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
-    <path d="M11.25 4.533A9.708 9.708 0 0 0 6 3a9.708 9.708 0 0 0-5.25 1.533v13.934A9.708 9.708 0 0 0 6 21a9.708 9.708 0 0 0 5.25-1.533V4.533Zm1.5 0v13.934A9.708 9.708 0 0 0 18 21a9.708 9.708 0 0 0 5.25-1.533V4.533A9.708 9.708 0 0 0 18 3a9.708 9.708 0 0 0-5.25 1.533Z" />
-  </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+    </svg>
 );
 
 const PronunciationIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
-    <path d="M9.75 4.5a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0V4.5Z" />
-    <path fillRule="evenodd" d="M4.5 2.25a.75.75 0 0 0-.75.75v12.5c0 .414.336.75.75.75h3.75a.75.75 0 0 0 0-1.5H5.25V3h13.5v3.75a.75.75 0 0 0 1.5 0V3a.75.75 0 0 0-.75-.75H4.5ZM19.5 9.75a.75.75 0 0 0-.75.75v8.036l-4.06-4.06a.75.75 0 0 0-1.06 1.06l5.25 5.25a.75.75 0 0 0 1.06 0l5.25-5.25a.75.75 0 1 0-1.06-1.06l-4.06 4.06V10.5a.75.75 0 0 0-.75-.75Z" clipRule="evenodd" />
-  </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" />
+    </svg>
 );
+
 
 const CorrectionCard: React.FC<{ correction: Correction, correctionAudio?: string | null, speechRate: number }> = ({ correction, correctionAudio, speechRate }) => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -45,12 +45,11 @@ const CorrectionCard: React.FC<{ correction: Correction, correctionAudio?: strin
         if (isPlaying || !correctionAudio) return;
         setIsPlaying(true);
         try {
-            const base64Audio = correctionAudio;
-            if (base64Audio) {
+            if (correctionAudio) {
                 if (!audioContextRef.current || audioContextRef.current.state === 'closed') {
                     audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 24000 });
                 }
-                const audioBuffer = await decodeAudioData(decode(base64Audio), audioContextRef.current, 24000, 1);
+                const audioBuffer = await decodeAudioData(decode(correctionAudio), audioContextRef.current, 24000, 1);
                 const source = audioContextRef.current.createBufferSource();
                 source.buffer = audioBuffer;
                 source.playbackRate.value = speechRate;
@@ -69,26 +68,28 @@ const CorrectionCard: React.FC<{ correction: Correction, correctionAudio?: strin
     const isGrammar = correction.type === CorrectionType.Grammar;
     const title = isGrammar ? 'Grammar Correction' : 'Pronunciation Tip';
     const Icon = isGrammar ? GrammarIcon : PronunciationIcon;
-    const bgColor = isGrammar ? 'bg-orange-100 dark:bg-orange-900/30' : 'bg-yellow-100 dark:bg-yellow-900/30';
-    const borderColor = isGrammar ? 'border-orange-300 dark:border-orange-700' : 'border-yellow-300 dark:border-yellow-700';
-    const titleColor = isGrammar ? 'text-orange-800 dark:text-orange-300' : 'text-yellow-800 dark:text-yellow-300';
+    const bgColor = isGrammar ? 'bg-orange-50 dark:bg-orange-900/30' : 'bg-yellow-50 dark:bg-yellow-900/30';
+    const borderColor = isGrammar ? 'border-orange-200 dark:border-orange-700/50' : 'border-yellow-200 dark:border-yellow-700/50';
+    const titleColor = isGrammar ? 'text-orange-700 dark:text-orange-300' : 'text-yellow-700 dark:text-yellow-300';
+    const buttonColor = isGrammar ? 'bg-orange-500 hover:bg-orange-600' : 'bg-yellow-500 hover:bg-yellow-600';
+
 
     return (
         <div className={`max-w-xs md:max-w-md lg:max-w-lg w-full ${bgColor} ${borderColor} border rounded-xl p-3 text-gray-800 dark:text-gray-200`}>
             <div className="flex items-center gap-2 mb-2">
                 <Icon className={`w-5 h-5 ${titleColor}`} />
-                <h4 className={`font-bold text-sm ${titleColor}`}>{title}</h4>
+                <h4 className={`font-semibold text-sm ${titleColor}`}>{title}</h4>
             </div>
             <div className="space-y-2 text-sm pl-7">
-                <p><span className="font-semibold text-gray-500 dark:text-gray-400">You said:</span> <em className="text-red-600 dark:text-red-400">"{correction.original}"</em></p>
+                <p><span className="font-semibold text-gray-500 dark:text-gray-400">You said:</span> <em className="text-red-600 dark:text-red-400 font-medium">"{correction.original}"</em></p>
                 <div>
                     <span className="font-semibold text-gray-500 dark:text-gray-400">Try saying:</span>
                     <div className="flex items-center gap-2 mt-1">
-                         <p className="flex-1 text-green-700 dark:text-green-300 font-medium">"{correction.corrected}"</p>
+                         <p className="flex-1 text-green-700 dark:text-green-300 font-bold">"{correction.corrected}"</p>
                          <button 
                             onClick={handlePlayPronunciation} 
                             disabled={isPlaying || !correctionAudio}
-                            className="p-1.5 rounded-full bg-blue-500 text-white hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-wait transition-colors"
+                            className={`p-1.5 rounded-full text-white ${buttonColor} disabled:bg-gray-400 disabled:cursor-wait transition-colors shadow-sm`}
                             aria-label="Listen to correct pronunciation"
                          >
                              <SpeakerIcon className="w-4 h-4" />
@@ -105,13 +106,16 @@ const CorrectionCard: React.FC<{ correction: Correction, correctionAudio?: strin
 const ChatBubble: React.FC<{ message: Message; speechRate: number }> = ({ message, speechRate }) => {
   const isUser = message.sender === Sender.User;
   return (
-    <div className={`flex flex-col gap-1 ${isUser ? 'items-end' : 'items-start'}`}>
+    <div className={`flex flex-col gap-1.5 ${isUser ? 'items-end' : 'items-start'}`}>
       <div
-        className={`max-w-xs md:max-w-md lg:max-w-lg rounded-2xl px-4 py-2 text-white ${
-          isUser ? 'bg-blue-500 rounded-br-none' : 'bg-green-600 rounded-bl-none'
-        }`}
+        className={`max-w-xs md:max-w-md lg:max-w-lg rounded-2xl px-4 py-2.5 shadow-sm
+          ${
+            isUser 
+            ? 'bg-indigo-500 text-white rounded-br-none' 
+            : 'bg-white dark:bg-slate-700 text-gray-800 dark:text-gray-100 rounded-bl-none border border-gray-200 dark:border-gray-600'
+          }`}
       >
-        <p className="text-sm">{message.text}</p>
+        <p className="text-sm leading-relaxed">{message.text}</p>
       </div>
       {isUser && message.correction && (
           <CorrectionCard correction={message.correction} correctionAudio={message.correctionAudio} speechRate={speechRate}/>
@@ -126,9 +130,9 @@ const InProgressBubble: React.FC<{ text: string, sender: Sender }> = ({ text, se
     return (
       <div className={`flex items-end gap-2 ${isUser ? 'justify-end' : 'justify-start'}`}>
         <div
-          className={`max-w-xs md:max-w-md lg:max-w-lg rounded-2xl px-4 py-2 italic text-gray-400 dark:text-gray-500 border ${
-            isUser ? 'border-blue-300 dark:border-blue-800 rounded-br-none' : 'border-green-300 dark:border-green-800 rounded-bl-none'
-          }`}
+          className={`max-w-xs md:max-w-md lg:max-w-lg rounded-2xl px-4 py-2.5 italic text-gray-400 dark:text-gray-500 border
+            ${isUser ? 'border-indigo-200 dark:border-indigo-800/50 rounded-br-none' : 'border-gray-200 dark:border-gray-700/50 rounded-bl-none'}
+          `}
         >
           <p className="text-sm">{text}</p>
         </div>
