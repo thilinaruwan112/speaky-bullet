@@ -1,8 +1,10 @@
-const CACHE_NAME = 'speak-ai-cache-v1';
+const CACHE_NAME = 'speak-ai-cache-v2';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/logo.svg'
+  '/logo.svg',
+  '/manifest.json',
+  '/index.tsx'
 ];
 
 self.addEventListener('install', event => {
@@ -14,6 +16,22 @@ self.addEventListener('install', event => {
         return cache.addAll(urlsToCache);
       })
   );
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheName !== CACHE_NAME) {
+            console.log('Service Worker: deleting old cache', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+  return self.clients.claim();
 });
 
 self.addEventListener('fetch', event => {
