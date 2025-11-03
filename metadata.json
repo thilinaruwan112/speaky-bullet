@@ -1,0 +1,7 @@
+{
+  "name": "Spoken English Practice AI",
+  "description": "An interactive web application that helps users practice their spoken English by having real-time conversations with an AI tutor powered by the Gemini API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
